@@ -31,7 +31,6 @@ app.post("/create_user", (req, res) => {
 // show user by id
 app.get("/all_users", (req, res) => {
   const id = req.query.id;
-  // let Query = `SELECT * FROM Persons WHERE ID = (?)`;
   connection.query(`SELECT * FROM Persons WHERE ID = '${id}'`, (err,rows, result) => {
     if(err) throw err;
     res.send(rows);

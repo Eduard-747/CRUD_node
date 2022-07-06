@@ -45,8 +45,6 @@ app.put("/update_user_fields", (req, res) => {
   {
     updateUserValues.push(req.body[key]);
   }
-  
-  console.log(updateUserValues);
 
   connection.query(`UPDATE Persons SET ${updateUserValues[1] !== '' ? `Name = '${updateUserValues[1]}',` : ''} Email = '${updateUserValues[2]}', 
     Country = '${updateUserValues[3]}', Age = '${updateUserValues[4]}' WHERE ID = '${updateUserValues[0]}'`, 

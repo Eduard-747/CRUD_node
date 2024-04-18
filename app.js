@@ -13,7 +13,7 @@ connection.connect(function(err) {
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-// create new user
+// create new user // // // //
 app.post("/create_user", (req, res) => {
 
   let user = req.body;
